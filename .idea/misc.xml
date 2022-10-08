@@ -5,9 +5,11 @@
       <map>
         <entry key="..\:/Users/Himanshu/AndroidStudioProjects/TeacherManagementSystem/app/src/main/res/drawable/background_btn.xml" value="0.162" />
         <entry key="..\:/Users/Himanshu/AndroidStudioProjects/TeacherManagementSystem/app/src/main/res/drawable/background_edttxt.xml" value="0.162" />
+        <entry key="..\:/Users/Himanshu/AndroidStudioProjects/TeacherManagementSystem/app/src/main/res/drawable/button.xml" value="0.162" />
+        <entry key="..\:/Users/Himanshu/AndroidStudioProjects/TeacherManagementSystem/app/src/main/res/drawable/view_pager.xml" value="0.162" />
         <entry key="..\:/Users/Himanshu/AndroidStudioProjects/TeacherManagementSystem/app/src/main/res/layout/activity_login_user.xml" value="0.25" />
         <entry key="..\:/Users/Himanshu/AndroidStudioProjects/TeacherManagementSystem/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
-        <entry key="..\:/Users/Himanshu/AndroidStudioProjects/TeacherManagementSystem/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Users/Himanshu/AndroidStudioProjects/TeacherManagementSystem/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
       </map>
     </option>
   </component>
