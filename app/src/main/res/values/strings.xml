@@ -21,6 +21,7 @@
     <string name="mobileNo">Contact Number</string>
     <string name="AadharNo">Aadhar Number</string>
     <string name="subject">Subject</string>
+    <string name="newAdd">New Admission</string>
     <string name="school">School</string>
     <string name="qualifications">Qualifications</string>
     <string name="user">User</string>
@@ -33,6 +34,8 @@
     <string name="register">Register</string>
     <string name="create">Create Account</string>
     <string name="createAcc">Create an Account</string>
+    <string name="attendance">Student Attendance</string>
+    <string name="studentDetails">Student Details</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
 </resources>

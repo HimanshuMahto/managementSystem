@@ -17,7 +17,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthEmailException;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
@@ -26,7 +25,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 //import kotlinx.coroutines.scheduling.Task;
 
@@ -42,49 +40,24 @@ public class sign_up extends AppCompatActivity {
     public static boolean isValidEmail(CharSequence target) {
         return target != null && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
     }
-    public boolean isValidPassword(String target){
-        if(target.length()>6){
+    public boolean isValidPassword(String target) {
+        if (target.length() > 6) {
             return ((target != null) && (!target.equals(""))
                     && (target.matches("^[a-zA-Z 0-9#-&@]*$")));
-        }
-        else
+        } else
             return false;
     }
-    public boolean isValidDOB(String target) {
-        int counter = 0;
-        if (target.length() >=6) {
-            if ((target != null) && (!target.equals("")) && (target.matches("^[0-9-]*$"))) {
-                for (int i = 0; i < 10; i++) {
-                    char ch = target.charAt(i);
-                    if (ch == '-') {
-                        counter++;
-                    }
-                }
-                if (counter == 2) {
-                    for (int i = 0; i < 10; i++) {
-                        char ch = target.charAt(i);
-                        if (ch == '-' && (i == 2 || i == 5)) {
-                            counter++;
-                        }
-                    }
-                    if (counter == 4)
-                        return true;
-                    else
-                        return false;
-                } else {
-                    return false;
-                }
-            } else
-                return false;
-        }
-        else
+    public boolean isValidDOB(String target){
+        if(target.isEmpty()){
             return false;
+        }
+        return true;
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        Button register=findViewById(R.id.newAdminRegister);
+        Button register=findViewById(R.id.adminLogin);
         EditText name=findViewById(R.id.newAdminName);
         EditText email=findViewById(R.id.newAdminEmail);
         EditText password=findViewById(R.id.newAdminPassword);

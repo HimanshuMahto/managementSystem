@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,10 +8,12 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:textColor="@color/black"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,9 +24,11 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
         android:text="@string/lAccount"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -34,11 +38,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="56dp"
+        android:gravity="center_horizontal"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:orientation="vertical"
@@ -55,7 +61,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/emailAdminLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -77,7 +83,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/passwordAdminLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -103,14 +109,12 @@
             app:layout_constraintVertical_bias="1.0">
 
             <Button
-                android:id="@+id/newAdminRegister"
+                android:id="@+id/adminLogin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="4dp"
-                android:layout_marginRight="4dp"
                 android:layout_marginBottom="1dp"
                 android:background="@drawable/button"
                 android:padding="18dp"
@@ -156,11 +160,12 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:scaleType="centerInside"
@@ -170,4 +175,15 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@mipmap/workingman" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:elevation="10dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
